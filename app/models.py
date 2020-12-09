@@ -17,18 +17,27 @@ class Client(db.Model):
         self.email_client = email_client
         self.photo = photo
 
+    @property
+    def serialize(self):
+        """Return object data in easily serializable format"""
+        return {
+            'id': self.id_client,
+            'name': self.name_client,
+            'email': self.email_client,
+            'photo': self.photo
+        }
 
-class Product(db.Model):
-    __product__ = 'product'
-    id_prod = db.Column(db.Integer, db.Sequence(
-        "seq_prod"), primary_key=True, nullable=False)
-    name_prod = db.Column(db.String(50), nullable=False)
-    initial_date = db.Column(db.Date, nullable=False)
-    final_date = db.Column(db.Date, nullable=True)
-    desc_prod = db.Column(db.String(500), nullable=True)
+# class Product(db.Model):
+#     __product__ = 'product'
+#     id_prod = db.Column(db.Integer, db.Sequence(
+#         "seq_prod"), primary_key=True, nullable=False)
+#     name_prod = db.Column(db.String(50), nullable=False)
+#     initial_date = db.Column(db.Date, nullable=False)
+#     final_date = db.Column(db.Date, nullable=True)
+#     desc_prod = db.Column(db.String(500), nullable=True)
 
-    def __init__(self, name_prod, initial_date, final_date, desc_prod):
-        self.name_prod = name_prod
-        self.initial_date = initial_date
-        self.final_date = final_date
-        self.desc_prod = desc_prod
+#     def __init__(self, name_prod, initial_date, final_date, desc_prod):
+#         self.name_prod = name_prod
+#         self.initial_date = initial_date
+#         self.final_date = final_date
+#         self.desc_prod = desc_prod
