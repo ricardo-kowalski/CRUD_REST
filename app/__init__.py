@@ -1,6 +1,5 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-from flask_marshmallow import Marshmallow
 import os
 
 
@@ -19,6 +18,3 @@ app.config['FLASK_ENV'] = 'development'
 
 # Inicializando Banco
 db = SQLAlchemy(app)
-
-# Inicializando Marshmallow
-ma = Marshmallow(app)
