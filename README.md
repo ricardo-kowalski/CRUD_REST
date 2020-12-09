@@ -1,7 +1,7 @@
 # CRUD_REST
 Atividade da matéria de Aplicações Distribuídas (ADID6)
 
-## Instalação ##
+## Instalação 
 
 Prerequisitos:
 - Python3
@@ -38,7 +38,7 @@ Método:
 GET
 curl --request GET '127.0.0.1:5000/'
 
-# Retorna lista com nome, email e url da foto de todos os clientes
+### Retorna lista com nome, email e url da foto de todos os clientes
 ~ curl -X GET http://127.0.0.1:5000/client/all
 
 
@@ -69,7 +69,7 @@ curl --request GET '127.0.0.1:5000/'
 } 
 -->
 
-# Retorna lista com nome, email e url da foto de um cliente em específico (por id)
+### Retorna lista com nome, email e url da foto de um cliente em específico (por id)
 ~ curl -X GET http://127.0.0.1:5000/client/id/4
 
 <!-- saída esperada:
@@ -87,7 +87,7 @@ curl --request GET '127.0.0.1:5000/'
 -->
 
 
-# Retorna lista com nome, email e url da foto de um cliente em específico (por nome)
+### Retorna lista com nome, email e url da foto de um cliente em específico (por nome)
 ~ curl -X GET http://127.0.0.1:5000/client/name/jose
 
 <!-- saída esperada:
@@ -104,7 +104,7 @@ curl --request GET '127.0.0.1:5000/'
 
 -->
 
-# Inclui um cliente ao banco
+### Inclui um cliente ao banco
 ~ curl -H "Content-Type: application/json" \
   -X POST \
   -d '{"name":"carlos","email":"carlos@cliente.com", "photo":"carlos.jpg"}' \
@@ -119,7 +119,7 @@ curl --request GET '127.0.0.1:5000/'
 }
  -->
 
-# Altera um cliente no banco
+### Altera um cliente no banco
 ~ curl -H "Content-Type: application/json" \
   -X PUT \
   -d '{"name":"ferreira","email":"ferreira@cliente.com", "photo":"ferreira.jpg"}' \
@@ -135,7 +135,7 @@ curl --request GET '127.0.0.1:5000/'
 -->
 
 
-# Deleta um cliente do banco
+### Deleta um cliente do banco
 ~ curl -X DELETE http://127.0.0.1:5000/client/1
 
 <!-- saída esperada:
