@@ -105,10 +105,7 @@ curl --request GET '127.0.0.1:5000/'
 -->
 
 ### Inclui um cliente ao banco
-~ curl -H "Content-Type: application/json" \
-  -X POST \
-  -d '{"name":"carlos","email":"carlos@cliente.com", "photo":"carlos.jpg"}' \
-  http://localhost:5000/client
+~ curl -H "Content-Type: application/json" -X POST -d '{"name":"carlos","email":"carlos@cliente.com", "photo":"carlos.jpg"}' http://localhost:5000/client
 
 <!-- saída esperada:
 {
@@ -120,10 +117,7 @@ curl --request GET '127.0.0.1:5000/'
  -->
 
 ### Altera um cliente no banco
-~ curl -H "Content-Type: application/json" \
-  -X PUT \
-  -d '{"name":"ferreira","email":"ferreira@cliente.com", "photo":"ferreira.jpg"}' \
-  http://localhost:5000/client/2
+~ curl -H "Content-Type: application/json" -X PUT -d '{"name":"ferreira","email":"ferreira@cliente.com", "photo":"ferreira.jpg"}' http://localhost:5000/client/2
 
 <!-- saída esperada:
   {
