@@ -11,11 +11,15 @@ Prerequisitos:
 Passos:
 
 #1 - clonar repositório
+```
 ~ git clone https://github.com/ricardo-kowalski/CRUD_REST
+```
 
 #2 - ativar ambiente virtual
+```
 ~ cd CRUD_REST
 ~ . venv/bin/activate
+```
 
 #3 - instalar bibliotecas 
 ```
