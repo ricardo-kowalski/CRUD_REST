@@ -41,7 +41,7 @@ curl --request GET '127.0.0.1:5000/'
 ### Retorna lista com nome, email e url da foto de todos os clientes
 ~ curl -X GET http://127.0.0.1:5000/client/all
 
-
+´´´
  saída esperada: 
 {
   "json_list": [
@@ -67,7 +67,7 @@ curl --request GET '127.0.0.1:5000/'
     }
   ]
 } 
-
+´´´
 
 ### Retorna lista com nome, email e url da foto de um cliente em específico (por id)
 ~ curl -X GET http://127.0.0.1:5000/client/id/4
