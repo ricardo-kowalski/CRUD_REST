@@ -41,7 +41,7 @@ curl --request GET '127.0.0.1:5000/'
 ### Retorna lista com nome, email e url da foto de todos os clientes
 ~ curl -X GET http://127.0.0.1:5000/client/all
 
-´´´
+```
  saída esperada: 
 {
   "json_list": [
@@ -67,11 +67,12 @@ curl --request GET '127.0.0.1:5000/'
     }
   ]
 } 
-´´´
+```
 
 ### Retorna lista com nome, email e url da foto de um cliente em específico (por id)
 ~ curl -X GET http://127.0.0.1:5000/client/id/4
 
+```
 saída esperada:
 {
   "client": [
@@ -83,13 +84,14 @@ saída esperada:
     }
   ]
 }
-
+```
 
 
 
 ### Retorna lista com nome, email e url da foto de um cliente em específico (por nome)
 ~ curl -X GET http://127.0.0.1:5000/client/name/jose
 
+```
 saída esperada:
 {
   "client": [
@@ -101,12 +103,13 @@ saída esperada:
     }
   ]
 }
-
+```
 
 
 ### Inclui um cliente ao banco
 ~ curl -H "Content-Type: application/json" -X POST -d '{"name":"carlos","email":"carlos@cliente.com", "photo":"carlos.jpg"}' http://localhost:5000/client
 
+```
 saída esperada:
 {
   "email": "gege@cliente.com", 
@@ -114,11 +117,12 @@ saída esperada:
   "name": "getulio", 
   "photo": "gege.jpg"
 }
-
+```
 
 ### Altera um cliente no banco
 ~ curl -H "Content-Type: application/json" -X PUT -d '{"name":"ferreira","email":"ferreira@cliente.com", "photo":"ferreira.jpg"}' http://localhost:5000/client/2
 
+```
 saída esperada:
   {
   "email": "ferreira@cliente.com", 
@@ -126,12 +130,13 @@ saída esperada:
   "name": "ferreira", 
   "photo": "ferreira.jpg"
 }
-
+```
 
 
 ### Deleta um cliente do banco
 ~ curl -X DELETE http://127.0.0.1:5000/client/1
 
+```
 saída esperada:
 {
   "email": "pedro@cliente.com", 
@@ -139,4 +144,5 @@ saída esperada:
   "name": "pedro", 
   "photo": "pedro.jpg"
 }
+```
 
