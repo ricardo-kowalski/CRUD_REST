@@ -9,6 +9,7 @@ Prerequisitos:
 - Virtualenv
 
 Passos:
+
 #1 - clonar repositório
 ~ git clone https://github.com/ricardo-kowalski/CRUD_REST
 
@@ -17,26 +18,35 @@ Passos:
 ~ . venv/bin/activate
 
 #3 - instalar bibliotecas 
+```
 ~ pip3 install -r requirements.txt
+```
 
 #4 - criando Banco
+```
 ~ flask initdb
 ~ flask populatedb
+```
 
 #5 - configurando arquivo de inicialização e tipo de ambiente
+```
 export FLASK_ENV=development
 export FLASK_APP=app
+```
 
 #6 - rodando o servidor
+```
 ~ flask run
-
+```
 
 ## API REST (aqui foi utilizado a ferramenta 'curl', mas também podem ser utilizadas Postman ou equivalentes)##
 
 Método: 
 
 GET
+```
 curl --request GET '127.0.0.1:5000/'
+```
 
 ### Retorna lista com nome, email e url da foto de todos os clientes
 ~ curl -X GET http://127.0.0.1:5000/client/all
